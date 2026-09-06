@@ -1,3 +1,27 @@
-# ConvertKit Connector - PREPARATION.md
+# Dashlane Connector — Preparation
 
-Standard documentation for ConvertKit Connector in Imperal Cloud.
+**Category:** C33. Password & Secrets Management  
+**Status:** Canonical App Preparation (APP_PREPARATION_STANDARD.md)  
+**Target API:** https://business-api.dashlane.com/v1  
+
+## 1. Паспорт приложения
+- **Название:** Dashlane Connector
+- **Категория:** C33. Password & Secrets Management
+- **Официальный сайт:** https://dashlane.com
+- **Модель доступа:** Dashlane Business API Key + Master Access Token
+
+## 2. Человеческая проблема
+Когда администратор безопасности сталкивается с задачей мониторинг уровня безопасности учетных данных сотрудников (Dark Web monitoring) и управление командным доступом, ей приходится вручную переключаться между сервисами, что приводит к задержкам и потере контроля данных.
+
+## 3. Пользователи и роли
+- **администратор безопасности:** операционная работа, контроль выполнения сценариев.
+- **Администратор безопасности / ИТ:** управление правами, ротация ключей доступа.
+- **Оператор Imperal Cloud:** автоматизация сценариев через безопасные протоколы ICNLI.
+
+## 4. Первичный сценарий
+`запрос командного скоринга безопасности -> поиск утекших в даркнет учетных записей -> аудит журнала`.
+
+## 5. Границы и безопасность
+- Никаких синтетических шаблонов от других предметных областей.
+- Использование только принципа Bring Your Own Credentials (BYOC).
+- Маскирование секретов и аудит всех изменений.
