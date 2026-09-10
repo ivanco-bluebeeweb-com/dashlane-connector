@@ -10,7 +10,7 @@ class DashlaneBusinessClient:
         self.api_key = api_key.strip()
         self.base_url = (base_url.strip() if base_url else DEFAULT_BASE).rstrip("/")
         self.headers = {
-            "Authorization": f"Bearer {self.api_key}" if "Authorization" == "Authorization" else self.api_key,
+            "Authorization": f"Bearer {self.api_key}" if not self.api_key.startswith("Bearer ") else self.api_key,
             "Content-Type": "application/json",
             "User-Agent": "Imperal-DashlaneBusiness-Connector/1.0.0"
         }
